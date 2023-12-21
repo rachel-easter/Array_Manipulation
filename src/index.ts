@@ -83,11 +83,11 @@ class ArrayManipulator {
   }
 
   getMaxProductOfAdjacentElements(): number {
-    let maxProduct = -Infinity;
+   
 
     for (let i = 0; i < this.array.length - 1; i++) {
       const product = this.array[i] * this.array[i + 1];
-      maxProduct = Math.max(maxProduct, product);
+      maxProduct = Math.max(product);
     }
 
     return maxProduct;
