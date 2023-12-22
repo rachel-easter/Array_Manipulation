@@ -1,4 +1,4 @@
-import Joi from 'joi';
+import Joi from 'joi';//plugin used for validation(used for reusibility)
 
 class DietApp {
   private numDaysInput: HTMLInputElement;
@@ -17,7 +17,7 @@ class DietApp {
     const numDays: number = parseInt(this.numDaysInput.value, 10);
     const caloriesInputValue = this.caloriesInput.value;
 
-    // Validate the input using Joi-//if we want we may check type too
+    // Validate the input using Joi Schema
     const schema = Joi.object({
       numDays: Joi.number().integer().min(1).required(),
       caloriesArray: Joi.string().pattern(/^\d+(,\s*\d+)*$/).required(),
